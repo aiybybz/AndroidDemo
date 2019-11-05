@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Service</string>
+    <string name="title_activity_foreground">ForegroundActivity</string>
+    <string name="start_service">START SERVICE</string>
+    <string name="stop_service">STOP SERVICE</string>
+    <string name="bind_service">BIND SERVICE</string>
+    <string name="unbind_service">UNBIND SERVICE</string>
+    <string name="foreground_service">FOREGROUND_SERVICE</string>
+    <string name="background_service">BACKGROUND_SERVICE</string>
+    <string name="start_download">START_DOWNLOAD</string>
+    <string name="pause_download">PAUSE_DOWNLOAD</string>
+    <string name="cancel_download">CANCEL_DOWNLOAD</string>
+    <string name="download_service">DOWNLOAD_SERVICE</string>
+</resources>
