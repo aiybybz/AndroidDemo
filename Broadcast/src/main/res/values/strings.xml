@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Broadcast</string>
+    <string name="normal_broadcast">Normal Broadcast\n标准广播</string>
+    <string name="system_broadcast">System Broadcast\n系统广播</string>
+    <string name="ordered_broadcast">Ordered Broadcast\n有序广播</string>
+    <string name="local_broadcast">Local Broadcast\n本地广播</string>
+    <string name="send_broadcast">发送广播</string>
 </resources>
