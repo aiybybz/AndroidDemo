@@ -24,17 +24,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".local.LocalActivity" />
 
-        <activity android:name=".normal.NormalActivity" />
         <receiver android:name=".normal.NormalReceiver">
             <intent-filter>
                 <action android:name="NORMAL_ACTION" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".system.SystemReceiver" >
+        <receiver android:name=".system.SystemReceiver">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".ordered.OrderedReceiver$OrderedOneReceiver">
+            <intent-filter android:priority="3000">
+                <action android:name="ORDERED_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ordered.OrderedReceiver$OrderedTwoReceiver">
+            <intent-filter android:priority="2000">
+                <action android:name="ORDERED_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ordered.OrderedReceiver$OrderedThreeReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="ORDERED_RECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".androidO.AndroidOActivity" />
+        <receiver android:name=".androidO.AndroidOReceiver" >
+            <intent-filter>
+                <action android:name="ANDROID_O" />
             </intent-filter>
         </receiver>
 

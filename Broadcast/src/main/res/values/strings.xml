@@ -5,4 +5,5 @@
     <string name="ordered_broadcast">Ordered Broadcast\n有序广播</string>
     <string name="local_broadcast">Local Broadcast\n本地广播</string>
     <string name="send_broadcast">发送广播</string>
+    <string name="android_o_broadcast">Android_O_Broadcast\n android o 修改</string>
 </resources>
