@@ -7,4 +7,8 @@ interface UserApi {
 
     void addUserInOut(inout User user);
 
+    void addUserIn(in User user);
+
+    void addUserOut(out User user);
+
 }

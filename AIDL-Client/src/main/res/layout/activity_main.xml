@@ -17,4 +17,16 @@
         android:layout_height="wrap_content"
         android:text="InOut 添加用户" />
 
+    <Button
+        android:id="@+id/btn_addBook_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="In 添加用户" />
+
+    <Button
+        android:id="@+id/btn_addBook_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Out 添加用户" />
+
 </LinearLayout>

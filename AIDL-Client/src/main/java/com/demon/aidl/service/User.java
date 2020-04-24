@@ -24,6 +24,10 @@ public class User implements Parcelable {
      */
     private boolean mark;
 
+    public User() {
+
+    }
+
     public User(String userName, String password, boolean mark) {
         this.userName = userName;
         this.password = password;

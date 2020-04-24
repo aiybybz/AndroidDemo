@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 链接服务
-     * TODO
      */
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({R.id.btn_getBookList, R.id.btn_addBook_inOut})
+    @OnClick({R.id.btn_getBookList, R.id.btn_addBook_inOut, R.id.btn_addBook_in, R.id.btn_addBook_out})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_getBookList:
@@ -102,6 +101,26 @@ public class MainActivity extends AppCompatActivity {
                     User user = new User("新增人，张三", "zs", true);
                     try {
                         api.addUserInOut(user);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            case R.id.btn_addBook_in:
+                if (connected) {
+                    User user = new User("新增人，李四 In", "lsi", true);
+                    try {
+                        api.addUserIn(user);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+            case R.id.btn_addBook_out:
+                if (connected) {
+                    User user = new User("新增人，王五 Out", "wwo", true);
+                    try {
+                        api.addUserOut(user);
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }

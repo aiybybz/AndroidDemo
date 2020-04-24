@@ -3,6 +3,7 @@ package com.demon.aidl.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.widget.Toast;
 
 import com.orhanobut.logger.Logger;
@@ -34,6 +35,30 @@ public class AIDLService extends Service {
                 Logger.d("AIDL-Service: addUserInOut " + user.toString());
             } else {
                 Logger.d("AIDL-Service: addUserInOut 接收到了一个空对象");
+            }
+        }
+
+        @Override
+        public void addUserIn(User user) {
+            Logger.d("AIDL-Service: addUserIn ");
+            if (user != null) {
+                user.setUserName("服务器改了用户名 In");
+                userList.add(user);
+                Logger.d("AIDL-Service: addUserIn " + user.toString());
+            } else {
+                Logger.d("AIDL-Service: addUserIn 接收到了一个空对象");
+            }
+        }
+
+        @Override
+        public void addUserOut(User user) {
+            Logger.d("AIDL-Service: addUserOut ");
+            if (user != null) {
+                user.setUserName("服务器改了新用户名 Out");
+                userList.add(user);
+                Logger.d("AIDL-Service: addUserOut " + user.toString());
+            } else {
+                Logger.d("AIDL-Service: addUserOut 接收到了一个空对象");
             }
         }
     };
