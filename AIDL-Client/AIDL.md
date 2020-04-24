@@ -1,5 +1,7 @@
 ## AIDL - 简介
 
+本文仅作为 AIDL 的初步了解与具体代码实现的讲解。并未深入IPC原理、Binder原理等。
+
 ### 一、概述
 
 AIDL ：Android Interface Definition Language，即 **Android接口定义语言**。
