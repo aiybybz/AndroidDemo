@@ -1,4 +1,3 @@
 <resources>
-    <string name="app_name">Permissions</string>
-    <string name="call">拨打 10010</string>
+    <string name="app_name">My Application</string>
 </resources>

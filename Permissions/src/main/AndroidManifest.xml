@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.demon.permissions">
+    package="org.demon.permissions">
 
-    <!-- 拨打电话的权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- ================= BLE蓝牙权限 ================= -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- ================= GPS位置权限 ================= -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
