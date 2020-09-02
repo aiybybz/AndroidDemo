@@ -1,2 +1,13 @@
-rootProject.name='AndroidDemo'
-include ':Service', ':broadcast'
+rootProject.name = 'AndroidDemo'
+include ':Permissions',
+        ':LiveData',
+        ':Service',
+        ':Broadcast',
+        ':ContentProvider',
+        ':ContentProvider-ContentResolver',
+        ':ProviderTest',
+        ':JetpackRoom',
+        ':DatabaseTest',
+        ':AIDL-Service',
+        ':AIDL-Client',
+        ':LifeCycle'
