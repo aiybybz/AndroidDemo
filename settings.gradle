@@ -1,3 +1,4 @@
+include ':DataBinding'
 rootProject.name = 'AndroidDemo'
 include ':Permissions',
         ':Service',
