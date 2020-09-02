@@ -2,9 +2,12 @@ package org.demon.livedata
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.arch.core.util.Function
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import androidx.lifecycle.Transformations
 import org.demon.livedata.databinding.ActivityMainBinding
 import java.math.BigDecimal
 
@@ -44,9 +47,36 @@ class MainActivity : AppCompatActivity() {
         // 3.Observer 添加到 LiveData
         currentName.observe(this@MainActivity, nameObserver)
 
+        // ====== 简化合并 ======
+        currentName.observe(this@MainActivity, {
+            binding.data = it
+        })
 
-//        StockLiveData.get(symbol).observe(viewLifecycleOwner, Observer<BigDecimal> { price: BigDecimal? ->
-//            // Update the UI.
+        // ====== Transformations.map 处理 类型转换 ======
+        Transformations.map(currentName) {
+            Function<String, String> { input -> "修改$input" }
+        }.observe(this@MainActivity, { newName ->
+            binding.data = newName.toString()
+        })
+
+        // ====== Transformations.map 处理 类型转换 (lambda简化后) ======
+        Transformations.map(currentName) { input -> "修改$input" }.observe(this@MainActivity, { newName ->
+            binding.data = newName
+        })
+
+
+        // ====== Transformations.map 处理 类型转换 ======
+//        val userLiveData = Transformations.switchMap(currentName, object : Function<String, LiveData<User>> {
+//            override fun apply(input: String?): LiveData<User> {
+//                // 根据 userId 返回一个 LiveData<User>，可通过 room 获取
+//                return dao.getUser()
+//            }
+//        })
+//
+//        // ====== Transformations.map 处理 类型转换 (lambda简化后)  ======
+//        val userLiveDataL = Transformations.switchMap(currentName, Function<String, LiveData<User>> {
+//            // 根据 userId 返回一个 LiveData<User>，可通过 room 获取
+//            dao.getUser()
 //        })
     }
 
