@@ -1,6 +1,5 @@
 rootProject.name = 'AndroidDemo'
 include ':Permissions',
-        ':LiveData',
         ':Service',
         ':Broadcast',
         ':ContentProvider',
@@ -10,4 +9,6 @@ include ':Permissions',
         ':DatabaseTest',
         ':AIDL-Service',
         ':AIDL-Client',
-        ':LifeCycle'
+        ':LifeCycle',
+        ':LiveData',
+        ':ViewModel'

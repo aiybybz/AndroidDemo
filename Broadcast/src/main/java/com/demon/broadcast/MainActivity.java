@@ -1,16 +1,13 @@
 package com.demon.broadcast;
 
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 
 import com.demon.broadcast.androidO.AndroidOActivity;
 import com.demon.broadcast.local.LocalActivity;
-import com.demon.broadcast.local.LocalReceiver;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 

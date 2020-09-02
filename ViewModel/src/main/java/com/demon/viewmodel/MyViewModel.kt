@@ -6,17 +6,11 @@ import androidx.lifecycle.ViewModel
 
 class MyViewModel : ViewModel() {
 
-    private val users: MutableLiveData<List<UserBean>> by lazy {
-        MutableLiveData<List<UserBean>>()
+    private val users: MutableLiveData<List<User>> by lazy {
+        MutableLiveData<List<User>>().also { loadUsers() }
     }
 
-//    private val users: MutableLiveData<List<UserBean>> by lazy {
-////        MutableLiveData().also {
-////            loadUsers()
-////        }
-//    }
-
-    fun getUsers(): LiveData<List<UserBean>> {
+    fun getUsers(): LiveData<List<User>> {
         return users
     }
 

@@ -1,6 +1,6 @@
 package com.demon.viewmodel
 
-internal class UserBean(
+data class User(
     val userName: String,
     val age: Int
 )
