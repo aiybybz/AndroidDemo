@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- layout 根布局 -->
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- data 数据节点：class Gradle生成的DataBinding类 -->
@@ -11,6 +12,14 @@
         <!-- variable 变量： name 变量名， type 变量类型-->
         <variable name="user" type="u" />
         <variable name="data" type="String" />
+
+        <!-- 导入可观察的集合 -->
+        <import type="androidx.databinding.ObservableMap"/>
+        <import type="androidx.databinding.ObservableList"/>
+        <!-- 绑定map，&lt;为< -->
+        <variable name="map" type="ObservableMap&lt;String,Object>"/>
+        <!-- 绑定list，&lt;为< -->
+        <variable name="list" type="ObservableList&lt;Object>"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,15 +38,42 @@
 
         <!-- default 设置默认值 -->
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.age, default=18}"
+            android:text="@{String.valueOf(user.age), default=18}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.625" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{String.valueOf(map.key1)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.254" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(list[0])}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.356" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

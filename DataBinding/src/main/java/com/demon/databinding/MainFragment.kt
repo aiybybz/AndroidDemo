@@ -9,10 +9,12 @@ import androidx.fragment.app.Fragment
 
 class MainFragment : Fragment() {
 
+    private lateinit var binding: MainFragmentBinding
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_main, container, false)
         // 获取 binding
-        val binding = DataBindingUtil.bind<MainFragmentBinding>(view)
-        return view
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
+        return binding.root
     }
 }
