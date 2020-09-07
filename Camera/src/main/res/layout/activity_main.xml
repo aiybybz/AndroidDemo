@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- data 数据节点：class Gradle生成的DataBinding类 -->
+    <data class=".MainActivityBinding">
+        <!-- import 导入类：alias 别名， type 变量类型 -->
+        <variable name="data" type="Object" />
+        <!-- 绑定监听 -->
+        <variable name="handler" type="org.demon.camera.MainActivity.EventHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:onClick="@{handler::onClick}"
+            android:text="button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="161dp" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="424dp"
+            android:layout_height="362dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="176dp"
+            app:imageUrl3="@{data}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
