@@ -12,7 +12,7 @@ interface IController {
      * 设置 数据模型
      * @param model Model
      */
-    fun setModel(model: IModel)
+    fun setModel(model: IModel): IController
 
     /**
      * 数据改变

@@ -1,5 +1,6 @@
 package org.demon.mvc.farme
 
+
 /**
  * @author : Demon
  * @version : 1.0
@@ -12,7 +13,7 @@ interface IModel {
      * 设置 视图
      * @param view View
      */
-    fun setView(view: IView)
+    fun setView(view: IView): IModel
 
     /**
      * 数据模型处理输入的数据

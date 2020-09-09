@@ -15,7 +15,8 @@ import org.demon.mvc.farme.IView
 
 class HandleActivity : AppCompatActivity(), IView {
 
-    private var controller: IController = HandleController()
+    private lateinit var controller: IController
+
 
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityHandleBinding>(this, R.layout.activity_handle)
@@ -33,7 +34,8 @@ class HandleActivity : AppCompatActivity(), IView {
         binding.title = "MVC-框架"
         binding.handler = EventHandler()
 
-        setController(controller)
+        // 设置 Controller
+        setController(HandleController().setModel(HandleModel().setView(this)))
     }
 
     companion object {
@@ -58,9 +60,7 @@ class HandleActivity : AppCompatActivity(), IView {
 
     override fun onDataHandled(data: String) {
         binding.title = "handle data ..."
-        controller.onDataChanged("handle data ...")
     }
-
 
     inner class EventHandler {
         fun onClick(v: View) {

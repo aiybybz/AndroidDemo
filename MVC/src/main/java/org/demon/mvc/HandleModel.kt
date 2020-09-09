@@ -11,8 +11,9 @@ class HandleModel : IModel {
     private var view: IView? = null
     private val handler: Handler = Handler(Looper.getMainLooper())
 
-    override fun setView(view: IView) {
+    override fun setView(view: IView): HandleModel {
         this.view = view
+        return this
     }
 
     /**

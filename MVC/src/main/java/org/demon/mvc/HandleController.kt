@@ -15,7 +15,8 @@ class HandleController : IController {
         model?.clearData()
     }
 
-    override fun setModel(model: IModel) {
+    override fun setModel(model: IModel): HandleController {
         this.model = model
+        return this
     }
 }
