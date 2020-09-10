@@ -3,8 +3,8 @@ package org.demon.mvc
 import android.os.Handler
 import android.os.Looper
 import android.text.TextUtils
-import org.demon.mvc.farme.IModel
-import org.demon.mvc.farme.IView
+import org.demon.mvc.frame.IModel
+import org.demon.mvc.frame.IView
 
 class HandleModel : IModel {
 

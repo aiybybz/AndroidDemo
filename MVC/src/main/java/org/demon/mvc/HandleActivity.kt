@@ -5,13 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import org.demon.mvc.databinding.ActivityHandleBinding
-import org.demon.mvc.farme.IController
-import org.demon.mvc.farme.IModel
-import org.demon.mvc.farme.IView
+import org.demon.mvc.frame.IController
+import org.demon.mvc.frame.IView
 
 class HandleActivity : AppCompatActivity(), IView {
 

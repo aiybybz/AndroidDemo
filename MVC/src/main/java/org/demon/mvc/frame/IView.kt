@@ -1,4 +1,4 @@
-package org.demon.mvc.farme
+package org.demon.mvc.frame
 
 /**
  * @author : Demon

@@ -1,7 +1,7 @@
 package org.demon.mvc
 
-import org.demon.mvc.farme.IController
-import org.demon.mvc.farme.IModel
+import org.demon.mvc.frame.IController
+import org.demon.mvc.frame.IModel
 
 class HandleController : IController {
 
