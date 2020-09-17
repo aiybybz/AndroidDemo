@@ -62,7 +62,7 @@ public class LocalActivity extends AppCompatActivity {
         // 6.发送应用内广播
         Intent intent = new Intent();
         intent.setAction("LOCAL_RECEIVER");
-        localBroadcastManager.sendBroadcast(intent);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 
     public static void actionStart(Context context) {

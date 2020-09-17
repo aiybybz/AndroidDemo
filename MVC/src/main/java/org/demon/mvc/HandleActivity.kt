@@ -14,7 +14,6 @@ class HandleActivity : AppCompatActivity(), IView {
 
     private lateinit var controller: IController
 
-
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityHandleBinding>(this, R.layout.activity_handle)
     }
