@@ -6,11 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.SavedStateViewModelFactory
 
+/**
+ * @author : Demon
+ * @version : 1.0
+ * @Description : 显示数据的界面控制器
+ * @date : 2020/11/4
+ */
 class UserProfileFragment : Fragment() {
 
     private val viewModel: UserProfileViewModel by viewModels(
-        factoryProducer = { SavedStateVMFactory(this) }
+        factoryProducer = { SavedStateViewModelFactory(this)}
     )
 
 

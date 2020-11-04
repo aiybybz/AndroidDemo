@@ -1,5 +1,6 @@
 package org.demon.mvvm_jetpack
 
+import org.demon.mvvm_jetpack.room.User
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

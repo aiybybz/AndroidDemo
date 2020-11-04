@@ -2,6 +2,7 @@ package org.demon.hilt
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
+import javax.inject.Inject
 import kotlin.properties.Delegates
 
 /**
@@ -13,6 +14,10 @@ import kotlin.properties.Delegates
 @HiltAndroidApp
 class Application : Application() {
 
+    // 告诉 Hilt 如何提供该类的实例
+    @Inject
+    lateinit var hiltSimple : HiltSimple
+
     companion object {
         var instance: Application by Delegates.notNull()
         fun instance() = instance
@@ -21,5 +26,6 @@ class Application : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+        hiltSimple.doSomething()
     }
 }
