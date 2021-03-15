@@ -17,7 +17,7 @@ import androidx.lifecycle.SavedStateViewModelFactory
 class UserProfileFragment : Fragment() {
 
     private val viewModel: UserProfileViewModel by viewModels(
-        factoryProducer = { SavedStateViewModelFactory(this)}
+//        factoryProducer = { SavedStateViewModelFactory(this)}
     )
 
 

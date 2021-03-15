@@ -18,14 +18,14 @@ class Application : Application() {
     @Inject
     lateinit var hiltSimple : HiltSimple
 
-    companion object {
-        var instance: Application by Delegates.notNull()
-        fun instance() = instance
-    }
-
     override fun onCreate() {
         super.onCreate()
         instance = this
         hiltSimple.doSomething()
+    }
+
+    companion object {
+        var instance: Application by Delegates.notNull()
+        fun instance() = instance
     }
 }
