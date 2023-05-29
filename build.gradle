@@ -4,9 +4,12 @@ buildscript {
     ext.kotlin_version = "1.4.10"
     ext.hilt_version = "2.28-alpha"
     repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
         google()
         jcenter()
-        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+//        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.2'

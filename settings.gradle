@@ -1,3 +1,4 @@
+rootProject.name = 'AndroidDemo'
 include ':Hilt'
 include ':MVVM-Jetpack'
 include ':MVVM'
@@ -5,7 +6,6 @@ include ':MVP'
 include ':MVC'
 include ':Camera'
 include ':DataBinding'
-rootProject.name = 'AndroidDemo'
 include ':Permissions',
         ':Service',
         ':Broadcast',
@@ -20,3 +20,6 @@ include ':Permissions',
         ':LiveData',
         ':ViewModel',
         ':DataBinding'
+include ':Handler'
+include ':ViewPager2'
+include ':myapplication'
