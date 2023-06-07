@@ -22,4 +22,3 @@ include ':Permissions',
         ':DataBinding'
 include ':Handler'
 include ':ViewPager2'
-include ':myapplication'

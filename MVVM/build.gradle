@@ -1,10 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "org.demon.mvvm"
@@ -28,6 +27,7 @@ android {
         //noinspection DataBindingWithoutKapt
         enabled = true
     }
+    namespace 'org.demon.mvvm'
 }
 
 dependencies {

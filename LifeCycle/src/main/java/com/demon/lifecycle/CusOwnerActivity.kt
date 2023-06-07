@@ -6,16 +6,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 
-/**
- * @author : Demon
- * @version : 1.0
- * @Description : 自定义 LifecycleOwner
- * @data : 2020/8/30
- */
+// 自定义 LifecycleOwner
 class CusOwnerActivity : Activity(), LifecycleOwner {
 
-    private lateinit var lifecycle: LifecycleRegistry
-
+    override lateinit var lifecycle: LifecycleRegistry
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +29,4 @@ class CusOwnerActivity : Activity(), LifecycleOwner {
         // 2.指定为 STARTED 标记
         lifecycle.currentState = Lifecycle.State.STARTED
     }
-
-    override fun getLifecycle(): Lifecycle {
-        return lifecycle
-    }
-
 }
